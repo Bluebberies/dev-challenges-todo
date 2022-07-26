@@ -1,38 +1,180 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App h1{
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: -0.045em;
+  color: #333333;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .states{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px;
+}
+
+.App button.delete{
+  width: 124px;
+  height: 40px;
+  border: none;
+  background: #EB5757;
+  border-radius: 4px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  margin-left: 23rem;
+}
+
+.App button.delete:hover{
+  background-color: #e61616;
+  color: #000000;
+}
+
+.App button i{
+  color: #FFFFFF;
+}
+  
+.App .states .state-type{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.App .states .state-type p{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+  user-select: none;
+}
+
+.App .states .state-type span{
+  width: 94px;
+  height: 4px;
+  background: #2F80ED;
+  border-radius: 4px 4px 0px 0px;
+  visibility: hidden;
+}
+
+.App .states .state-type span.active{
+  visibility: visible;
+}
+
+.App .horizontalLine{
+  margin-top: -1px;
+  width: 490px;
+  border: 1px solid #BDBDBD;
+}
+
+.App .inputs{
+  display: flex;
+  gap: 25px;
+  margin-top: 18px;
+}
+
+.App .inputs input{
+  width: 370px;
+  height: 46px;
+  border: 1px solid #BDBDBD;
+  border-radius: 12px;  
+  text-indent: 10px;
+}
+
+.App .inputs input::placeholder{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;  
+}
+
+.App .inputs button{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  border: none;
+  width: 89px;
+  height: 49px;
+  background: #2F80ED;
+  box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.App ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+  margin-left: -55px;
+}
+
+.App ul li{
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 4fr 0fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.App ul li .taskItem{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  user-select: none;
+}
+
+.App ul li .taskItem input{
+  width: 24px;
+  height: 24px;
+  border: 1px solid #828282;
+  border-radius: 4px;  
+}
+
+.App ul li .taskItem label{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000; 
+  width: 23rem;
+}
+
+.App ul li .taskItem label.checked{
+  text-decoration: line-through;
+}
+
+.App ul li .fa-trash{
+  cursor: pointer;
+  color: #BDBDBD;
+}
+
+.App ul li .fa-trash:hover{
+  color: #000000;
 }
